@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+
+    <style name="RoundedImageViewStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="CustomTextView">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="CustomTextViewBold">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+</resources>

@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">List Dosen UNSRI</string>
+    <string name="dosen_name">Nama Dosen</string>
+    <string name="description">Fakultas</string>
+    <string-array name="data_name">
+        <item>Mgs. Afriyan Firdaus, S.Si. M.IT.</item>
+        <item>Fathoni, S.T., MMSI.</item>
+        <item>Dedy Kurniawan, S.SI., M.Sc.</item>
+        <item>Dr. Ali Ibrahim, M.T.</item>
+        <item>Ken Ditha Tania, M.Kom., PhD.</item>
+        <item>Nabila Rizky Oktadini, S.SI., M.T.</item>
+        <item>Pacu Putra, B.CS., M.CS.</item>
+        <item>Rahmat Izwan Heroza, M.T.</item>
+        <item>Ari Wedhasmara, M.TI.</item>
+        <item>Yadi Utama, S.Kom., M.Kom.</item>
+        <item>Allsela Meiriza, M.T.</item>
+        <item>Ali Bardadi, S.SI., M.Kom.</item>
+        <item>Dwi Rosa Indah, M.T.</item>
+        <item>Putri Eka Sevtiyuni, M.T.</item>
+    </string-array>
+    <integer-array name="data_photo">
+        <item>@drawable/f1</item>
+        <item>@drawable/f2</item>
+        <item>@drawable/f3</item>
+        <item>@drawable/f4</item>
+        <item>@drawable/f5</item>
+        <item>@drawable/f6</item>
+        <item>@drawable/f7</item>
+        <item>@drawable/f8</item>
+        <item>@drawable/f9</item>
+        <item>@drawable/f10</item>
+        <item>@drawable/f11</item>
+        <item>@drawable/f12</item>
+        <item>@drawable/f13</item>
+        <item>@drawable/f14</item>
+    </integer-array>
+    <string-array name="extra_data_1">
+        <item>198202122006041003</item>
+        <item>197210182008121001</item>
+        <item>199008022019031006</item>
+        <item>198407212019031004</item>
+        <item>198507182012122003</item>
+        <item>199110102018032001</item>
+        <item>198912182013011201</item>
+        <item>198706302015041001</item>
+        <item>197812112010121002</item>
+        <item>197901152008011008</item>
+        <item>198305132015012201</item>
+        <item>198806292019031007</item>
+        <item>198201132015042001</item>
+        <item>198909262022032009</item>
+    </string-array>
+    <string-array name="extra_data_2">
+        <item>0012028203</item>
+        <item>0218107201</item>
+        <item>0002089003</item>
+        <item>0021078402</item>
+        <item>0010109104</item>
+        <item>0010109104</item>
+        <item>0018128901</item>
+        <item>0030068703</item>
+        <item>-</item>
+        <item>0015017905</item>
+        <item>0013058302</item>
+        <item>0029068805</item>
+        <item>0013018204</item>
+        <item>0026098905</item>
+    </string-array>
+    <string-array name="extra_data_3">
+        <item>LEKTOR</item>
+        <item>LEKTOR</item>
+        <item>ASISTEN AHLI, SEKRETARIS JURUSAN</item>
+        <item>LEKTOR</item>
+        <item>ASISTEN AHLI</item>
+        <item>ASISTEN AHLI</item>
+        <item>LEKTOR</item>
+        <item>LEKTOR</item>
+        <item>ASISTEN AHLI</item>
+        <item>ASISTEN AHLI</item>
+        <item>LEKTOR</item>
+        <item>ASISTEN AHLI</item>
+        <item>LEKTOR</item>
+        <item>ASISTEN AHLI</item>
+    </string-array>
+</resources>
