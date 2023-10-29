@@ -6,12 +6,14 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.appcompat.widget.SearchView;
+import android.widget.TextView;
 
 
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.os.Bundle;
+import android.os.Handler;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -21,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Dosen> list = new ArrayList<>();
     private ListDosenAdapter listHeroAdapter;
 
+    private SearchView searchView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +32,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        searchView = findViewById(R.id.searchView);
+        searchView.clearFocus();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                filterList(newText);
+                return true;
+            }
+        });
         rvHeroes = findViewById(R.id.rv_heroes);
         rvHeroes.setHasFixedSize(true);
 
@@ -40,19 +58,6 @@ public class MainActivity extends AppCompatActivity {
             rvHeroes.setLayoutManager(new LinearLayoutManager(this));
         }
 
-        SearchView searchView = findViewById(R.id.searchView);
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                listHeroAdapter.filter(newText);
-                return true;
-            }
-        });
 
     }
 
@@ -76,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
         listHeroAdapter = new ListDosenAdapter(this, list);
         rvHeroes.setAdapter(listHeroAdapter);
 
+
         listHeroAdapter.setOnItemClickCallback(data -> showSelectedDosen(data));
     }
 
@@ -96,6 +102,33 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("EXTRA_DATA_3", "Additional Data 3");
             holder.itemView.getContext().startActivity(intent);
         });
+    }
+
+    private void filterList(String text) {
+        ArrayList<Dosen> filteredList = new ArrayList<>();
+        for (Dosen dosen : list) {
+            if (dosen.getName().toLowerCase().contains(text.toLowerCase())) {
+                filteredList.add(dosen);
+            }
+        }
+
+        if (filteredList.isEmpty()) {
+            // If filtered list is empty, set an empty list to the adapter
+            listHeroAdapter.setFilteredList(new ArrayList<>());
+            // Toast message for data not found
+            showToast("Data tidak ditemukan");
+        } else {
+            // If filtered list is not empty, set the filtered list to the adapter
+            listHeroAdapter.setFilteredList(filteredList);
+        }
+    }
+    private void showToast(String message) {
+        Toast toast = Toast.makeText(this, message, Toast.LENGTH_SHORT);
+        toast.show();
+
+        // Dismiss the toast after a custom duration (e.g., 1.5 seconds)
+        Handler handler = new Handler();
+        handler.postDelayed(() -> toast.cancel(), 1500); // 1500 milliseconds (1.5 seconds)
     }
 
 }

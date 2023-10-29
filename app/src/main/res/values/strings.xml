@@ -1,7 +1,27 @@
 <resources>
-    <string name="app_name">List Dosen UNSRI</string>
+    <string name="app_name">Dosen Universitas Sriwijaya</string>
     <string name="dosen_name">Nama Dosen</string>
     <string name="description">Fakultas</string>
+    <string-array name="description">
+        <item>Fakultas Ilmu Komputer</item>
+        <item>Fakultas Ilmu Komputer</item>
+        <item>Fakultas Ilmu Komputer</item>
+        <item>Fakultas Ilmu Komputer</item>
+        <item>Fakultas Ilmu Komputer</item>
+        <item>Fakultas Ilmu Komputer</item>
+        <item>Fakultas Ilmu Komputer</item>
+        <item>Fakultas Ilmu Komputer</item>
+        <item>Fakultas Ilmu Komputer</item>
+        <item>Fakultas Ilmu Komputer</item>
+        <item>Fakultas Ilmu Komputer</item>
+        <item>Fakultas Ilmu Komputer</item>
+        <item>Fakultas Ilmu Komputer</item>
+        <item>Fakultas Ilmu Komputer</item>
+        <item>Fakultas Ilmu Komputer</item>
+        <item>Fakultas Ilmu Komputer</item>
+        <item>Fakultas Ilmu Komputer</item>
+        <item>Fakultas Ilmu Komputer</item>
+    </string-array>
     <string-array name="data_name">
         <item>Mgs. Afriyan Firdaus, S.Si. M.IT.</item>
         <item>Fathoni, S.T., MMSI.</item>
@@ -17,6 +37,10 @@
         <item>Ali Bardadi, S.SI., M.Kom.</item>
         <item>Dwi Rosa Indah, M.T.</item>
         <item>Putri Eka Sevtiyuni, M.T.</item>
+        <item>Ahmad Hutri Semendawai</item>
+        <item>Khadaffi Al Hakim</item>
+        <item>Rini Wulan Sari</item>
+        <item>Viola Meiriza</item>
     </string-array>
     <integer-array name="data_photo">
         <item>@drawable/f1</item>
@@ -33,6 +57,10 @@
         <item>@drawable/f12</item>
         <item>@drawable/f13</item>
         <item>@drawable/f14</item>
+        <item>@drawable/f15</item>
+        <item>@drawable/f16</item>
+        <item>@drawable/f17</item>
+        <item>@drawable/f18</item>
     </integer-array>
     <string-array name="extra_data_1">
         <item>198202122006041003</item>
@@ -49,6 +77,10 @@
         <item>198806292019031007</item>
         <item>198201132015042001</item>
         <item>198909262022032009</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
     </string-array>
     <string-array name="extra_data_2">
         <item>0012028203</item>
@@ -65,6 +97,10 @@
         <item>0029068805</item>
         <item>0013018204</item>
         <item>0026098905</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
     </string-array>
     <string-array name="extra_data_3">
         <item>LEKTOR</item>
@@ -81,5 +117,9 @@
         <item>ASISTEN AHLI</item>
         <item>LEKTOR</item>
         <item>ASISTEN AHLI</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
     </string-array>
 </resources>

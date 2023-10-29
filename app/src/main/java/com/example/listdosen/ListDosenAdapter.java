@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 import android.widget.Filter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -20,29 +21,21 @@ public class ListDosenAdapter extends RecyclerView.Adapter<ListDosenAdapter.List
     private ArrayList<Dosen> listDosen;
     private ArrayList<Dosen> filteredList;
     private Context context;
+    private int selectedPosition = RecyclerView.NO_POSITION;
+    private ArrayList<Dosen> originalList;
+
+    public void setFilteredList(ArrayList<Dosen> filteredList){
+        this.listDosen = filteredList;
+        notifyDataSetChanged();
+    }
 
     public ListDosenAdapter(Context context, ArrayList<Dosen> list) {
         this.context = context;
         this.listDosen = list;
+        this.originalList = list;
         this.filteredList = new ArrayList<>(list);
     }
 
-    public void filter(String query) {
-        filteredList.clear();
-        if (query.isEmpty()) {
-            filteredList.addAll(listDosen);
-        } else {
-            String filterPattern = query.toLowerCase().trim();
-            for (Dosen dosen : listDosen) {
-                if (Arrays.asList(context.getResources().getStringArray(R.array.data_name)).contains(dosen.getName())) {
-                    if (dosen.getName().toLowerCase().contains(filterPattern)) {
-                        filteredList.add(dosen);
-                    }
-                }
-            }
-        }
-        notifyDataSetChanged();
-    }
 
     private OnItemClickCallback onItemClickCallback;
     public void setOnItemClickCallback(OnItemClickCallback onItemClickCallback) {
@@ -62,23 +55,31 @@ public class ListDosenAdapter extends RecyclerView.Adapter<ListDosenAdapter.List
         holder.imgPhoto.setImageResource(dosen.getPhoto());
         holder.tvName.setText(dosen.getName());
 
-
         // Set an OnClickListener for the item
         holder.itemView.setOnClickListener(view -> {
-            // Get the selected Dosen object
-            Dosen selectedDosen = listDosen.get(position);
+            // Get the selected Dosen object from the original list
+            Dosen selectedDosen = originalList.get(originalList.indexOf(dosen));
+
+            // Find the position of the selectedDosen in the original list
+            int originalPosition = originalList.indexOf(selectedDosen);
+
+            String[] descriptions = context.getResources().getStringArray(R.array.description);
+            String description = descriptions[originalPosition];
 
             // Create an Intent to start DetailsActivity
             Intent intent = new Intent(view.getContext(), DetailsActivity.class);
 
-            // Pass the selected Dosen object and position to DetailsActivity
+            // Pass the selected Dosen object and original position to DetailsActivity
             intent.putExtra("DOSEN", selectedDosen);
-            intent.putExtra("POSITION", position);
+            intent.putExtra("POSITION", originalPosition);
+            intent.putExtra("DESCRIPTION", description);
 
             // Start DetailsActivity with the selected Dosen object and position
             view.getContext().startActivity(intent);
+
         });
     }
+
 
     @Override
     public int getItemCount() {
