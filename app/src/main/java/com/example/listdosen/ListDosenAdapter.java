@@ -5,17 +5,13 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.AnimationUtils;
-import android.widget.Filter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class ListDosenAdapter extends RecyclerView.Adapter<ListDosenAdapter.ListViewHolder> {
     private ArrayList<Dosen> listDosen;
@@ -55,26 +51,26 @@ public class ListDosenAdapter extends RecyclerView.Adapter<ListDosenAdapter.List
         holder.imgPhoto.setImageResource(dosen.getPhoto());
         holder.tvName.setText(dosen.getName());
 
-        // Set an OnClickListener for the item
+
         holder.itemView.setOnClickListener(view -> {
-            // Get the selected Dosen object from the original list
+
             Dosen selectedDosen = originalList.get(originalList.indexOf(dosen));
 
-            // Find the position of the selectedDosen in the original list
+
             int originalPosition = originalList.indexOf(selectedDosen);
 
             String[] descriptions = context.getResources().getStringArray(R.array.description);
             String description = descriptions[originalPosition];
 
-            // Create an Intent to start DetailsActivity
+
             Intent intent = new Intent(view.getContext(), DetailsActivity.class);
 
-            // Pass the selected Dosen object and original position to DetailsActivity
+
             intent.putExtra("DOSEN", selectedDosen);
             intent.putExtra("POSITION", originalPosition);
             intent.putExtra("DESCRIPTION", description);
 
-            // Start DetailsActivity with the selected Dosen object and position
+
             view.getContext().startActivity(intent);
 
         });

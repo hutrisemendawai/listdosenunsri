@@ -1,10 +1,7 @@
 package com.example.listdosen;
 
 import android.os.Parcel;
-import android.os.Parcel;
 import android.os.Parcelable;
-
-import androidx.annotation.NonNull;
 
 public class Dosen implements Parcelable {
     private String name;

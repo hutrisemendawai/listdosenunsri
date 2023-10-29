@@ -113,12 +113,12 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (filteredList.isEmpty()) {
-            // If filtered list is empty, set an empty list to the adapter
+
             listHeroAdapter.setFilteredList(new ArrayList<>());
-            // Toast message for data not found
+
             showToast("Data tidak ditemukan");
         } else {
-            // If filtered list is not empty, set the filtered list to the adapter
+
             listHeroAdapter.setFilteredList(filteredList);
         }
     }
@@ -126,9 +126,9 @@ public class MainActivity extends AppCompatActivity {
         Toast toast = Toast.makeText(this, message, Toast.LENGTH_SHORT);
         toast.show();
 
-        // Dismiss the toast after a custom duration (e.g., 1.5 seconds)
+
         Handler handler = new Handler();
-        handler.postDelayed(() -> toast.cancel(), 1500); // 1500 milliseconds (1.5 seconds)
+        handler.postDelayed(() -> toast.cancel(), 1500);
     }
 
 }
