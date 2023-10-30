@@ -17,10 +17,10 @@
         <item>Fakultas Ilmu Komputer</item>
         <item>Fakultas Ilmu Komputer</item>
         <item>Fakultas Ilmu Komputer</item>
+        <item>Fakultas Ekonomi</item>
         <item>Fakultas Ilmu Komputer</item>
-        <item>Fakultas Ilmu Komputer</item>
-        <item>Fakultas Ilmu Komputer</item>
-        <item>Fakultas Ilmu Komputer</item>
+        <item>Fakultas Hukum</item>
+        <item>Fakultas Kedokteran</item>
     </string-array>
     <string-array name="data_name">
         <item>Mgs. Afriyan Firdaus, S.Si. M.IT.</item>
@@ -38,7 +38,7 @@
         <item>Dwi Rosa Indah, M.T.</item>
         <item>Putri Eka Sevtiyuni, M.T.</item>
         <item>Ahmad Hutri Semendawai</item>
-        <item>Khadaffi Al Hakim</item>
+        <item>Khaddafi Al Hakim</item>
         <item>Rini Wulan Sari</item>
         <item>Viola Meiriza</item>
     </string-array>
@@ -77,10 +77,10 @@
         <item>198806292019031007</item>
         <item>198201132015042001</item>
         <item>198909262022032009</item>
-        <item>-</item>
-        <item>-</item>
-        <item>-</item>
-        <item>-</item>
+        <item>198909262022032321</item>
+        <item>198909262022032921</item>
+        <item>198909262022032955</item>
+        <item>198909262022032122</item>
     </string-array>
     <string-array name="extra_data_2">
         <item>0012028203</item>
@@ -91,16 +91,16 @@
         <item>0010109104</item>
         <item>0018128901</item>
         <item>0030068703</item>
-        <item>-</item>
+        <item>0030068703</item>
         <item>0015017905</item>
         <item>0013058302</item>
         <item>0029068805</item>
         <item>0013018204</item>
         <item>0026098905</item>
-        <item>-</item>
-        <item>-</item>
-        <item>-</item>
-        <item>-</item>
+        <item>0030068033</item>
+        <item>0030068090</item>
+        <item>0030068031</item>
+        <item>0030068282</item>
     </string-array>
     <string-array name="extra_data_3">
         <item>LEKTOR</item>
@@ -117,9 +117,74 @@
         <item>ASISTEN AHLI</item>
         <item>LEKTOR</item>
         <item>ASISTEN AHLI</item>
-        <item>-</item>
-        <item>-</item>
-        <item>-</item>
-        <item>-</item>
+        <item>LEKTOR</item>
+        <item>REKTOR</item>
+        <item>LEKTOR</item>
+        <item>ASISTEN AHLI</item>
+    </string-array>
+
+<!--    Alamat-->
+    <string-array name="extra_data_4">
+        <item>JL. Radio No.2 KM.4</item>
+        <item>Jl. Sukabangun II Nomor 1610</item>
+        <item>Jl. Garuda Kayu Ara No. 2</item>
+        <item>Jl. Dr. M. Isa No. 988</item>
+        <item>Jl. Mayor Salim Batubara No. 224 Sekip Bendung</item>
+        <item>Jl. Jendral Sudirman</item>
+        <item>Jl. Letnan kolonel Iskandar</item>
+        <item>Jl. Rajawali No. 8</item>
+        <item>Jl. Kartini No 2 Kel. Talang Semut Kec. Bukit Kecil</item>
+        <item>Jl. Mayor Salim Batubara No. 312 Sekip Bendung</item>
+        <item>Jl. Jend.sudirman 147</item>
+        <item>JL. Radio No.20 KM.4</item>
+        <item>Jl. Sukabangun II Nomor 3210</item>
+        <item>Jl. Garuda Kayu Ara No. 99</item>
+        <item>Jl. Dr. M. Isa No. 7</item>
+        <item>Jl. Mayor Salim Batubara No. 69</item>
+        <item>Jl. Jendral Sudirman No. 1</item>
+        <item>Jl. Letnan kolonel Iskandar No. 2</item>
+    </string-array>
+<!--    Email-->
+    <string-array name="extra_data_5">
+        <item>0012028203@gmail.com</item>
+        <item>0218107201@gmail.com</item>
+        <item>0002089003@gmail.com</item>
+        <item>0021078402@gmail.com</item>
+        <item>0010109104@gmail.com</item>
+        <item>0010109104@gmail.com</item>
+        <item>0018128901@gmail.com</item>
+        <item>0030068703@gmail.com</item>
+        <item>0030068703@gmail.com</item>
+        <item>0015017905@gmail.com</item>
+        <item>0013058302@gmail.com</item>
+        <item>0029068805@gmail.com</item>
+        <item>0013018204@gmail.com</item>
+        <item>0026098905@gmail.com</item>
+        <item>0030068033@gmail.com</item>
+        <item>0030068090@gmail.com</item>
+        <item>0030068031@gmail.com</item>
+        <item>0030068282@gmail.com</item>
+    </string-array>
+
+<!--    Telepon-->
+    <string-array name="extra_data_6">
+        <item>+6286281086922</item>
+        <item>+6285494481848</item>
+        <item>+62827582521</item>
+        <item>+628137444427</item>
+        <item>+6281004673091</item>
+        <item>+62831713939</item>
+        <item>+6283098896141</item>
+        <item>+62876400283</item>
+        <item>+6285736023900</item>
+        <item>+628392512645</item>
+        <item>+628660010361</item>
+        <item>+628731992291</item>
+        <item>+628549116846</item>
+        <item>+62815541752</item>
+        <item>+628221022023</item>
+        <item>+628428622037</item>
+        <item>+6286350760049</item>
+        <item>+6287677146576</item>
     </string-array>
 </resources>

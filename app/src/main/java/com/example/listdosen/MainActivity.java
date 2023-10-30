@@ -100,6 +100,9 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("EXTRA_DATA_1", "Additional Data 1");
             intent.putExtra("EXTRA_DATA_2", "Additional Data 2");
             intent.putExtra("EXTRA_DATA_3", "Additional Data 3");
+            intent.putExtra("EXTRA_DATA_4", "Additional Data 4");
+            intent.putExtra("EXTRA_DATA_5", "Additional Data 5");
+            intent.putExtra("EXTRA_DATA_6", "Additional Data 6");
             holder.itemView.getContext().startActivity(intent);
         });
     }
