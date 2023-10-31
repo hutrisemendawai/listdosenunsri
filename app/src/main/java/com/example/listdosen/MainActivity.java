@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.appcompat.widget.SearchView;
+
+import android.content.res.Resources;
 import android.widget.TextView;
 
 
@@ -46,6 +48,13 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+
+        Resources res = getResources();
+        String[] descriptions = ((Resources) res).getStringArray(R.array.description);
+        int totalCount = descriptions.length;
+        TextView descriptionTextView = findViewById(R.id.descriptionTextView);
+        descriptionTextView.setText(String.valueOf(totalCount)+" Orang");
+
         rvHeroes = findViewById(R.id.rv_heroes);
         rvHeroes.setHasFixedSize(true);
 

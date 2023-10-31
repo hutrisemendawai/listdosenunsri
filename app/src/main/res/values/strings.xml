@@ -17,10 +17,11 @@
         <item>Fakultas Ilmu Komputer</item>
         <item>Fakultas Ilmu Komputer</item>
         <item>Fakultas Ilmu Komputer</item>
-        <item>Fakultas Ekonomi</item>
         <item>Fakultas Ilmu Komputer</item>
+        <item>Fakultas Ekonomi</item>
         <item>Fakultas Hukum</item>
         <item>Fakultas Kedokteran</item>
+        <item>Fakultas Pertanian</item>
     </string-array>
     <string-array name="data_name">
         <item>Mgs. Afriyan Firdaus, S.Si. M.IT.</item>
@@ -37,10 +38,11 @@
         <item>Ali Bardadi, S.SI., M.Kom.</item>
         <item>Dwi Rosa Indah, M.T.</item>
         <item>Putri Eka Sevtiyuni, M.T.</item>
-        <item>Ahmad Hutri Semendawai</item>
-        <item>Khaddafi Al Hakim</item>
-        <item>Rini Wulan Sari</item>
-        <item>Viola Meiriza</item>
+        <item>Ahmad Hutri Semendawai, M.TI.</item>
+        <item>Dr. Khaddafi Al Hakim, M.Ak.</item>
+        <item>Rini Wulan Sari, M.H.</item>
+        <item>dr. Viola Meiriza, Sp.G.</item>
+        <item>Prof. Marcellinus Michael. Ph.D.</item>
     </string-array>
     <integer-array name="data_photo">
         <item>@drawable/f1</item>
@@ -61,6 +63,7 @@
         <item>@drawable/f16</item>
         <item>@drawable/f17</item>
         <item>@drawable/f18</item>
+        <item>@drawable/f19</item>
     </integer-array>
     <string-array name="extra_data_1">
         <item>198202122006041003</item>
@@ -81,6 +84,7 @@
         <item>198909262022032921</item>
         <item>198909262022032955</item>
         <item>198909262022032122</item>
+        <item>198909262022032888</item>
     </string-array>
     <string-array name="extra_data_2">
         <item>0012028203</item>
@@ -101,6 +105,7 @@
         <item>0030068090</item>
         <item>0030068031</item>
         <item>0030068282</item>
+        <item>0030068888</item>
     </string-array>
     <string-array name="extra_data_3">
         <item>LEKTOR</item>
@@ -118,9 +123,10 @@
         <item>LEKTOR</item>
         <item>ASISTEN AHLI</item>
         <item>LEKTOR</item>
-        <item>REKTOR</item>
+        <item>LEKTOR</item>
         <item>LEKTOR</item>
         <item>ASISTEN AHLI</item>
+        <item>DEKAN, REKTOR, WAKIL DEKAN I, II, III</item>
     </string-array>
 
 <!--    Alamat-->
@@ -143,6 +149,7 @@
         <item>Jl. Mayor Salim Batubara No. 69</item>
         <item>Jl. Jendral Sudirman No. 1</item>
         <item>Jl. Letnan kolonel Iskandar No. 2</item>
+        <item>Jl. Kenten No.9000</item>
     </string-array>
 <!--    Email-->
     <string-array name="extra_data_5">
@@ -164,6 +171,7 @@
         <item>0030068090@gmail.com</item>
         <item>0030068031@gmail.com</item>
         <item>0030068282@gmail.com</item>
+        <item>tugasming@gmail.com</item>
     </string-array>
 
 <!--    Telepon-->
@@ -186,5 +194,6 @@
         <item>+628428622037</item>
         <item>+6286350760049</item>
         <item>+6287677146576</item>
+        <item>+6287677146888</item>
     </string-array>
 </resources>
