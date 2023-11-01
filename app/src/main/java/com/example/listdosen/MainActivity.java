@@ -106,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(holder.itemView.getContext(), DetailsActivity.class);
             intent.putExtra("DOSEN", dosen);
+            intent.putExtra("POSITION", position);
             intent.putExtra("EXTRA_DATA_1", "Additional Data 1");
             intent.putExtra("EXTRA_DATA_2", "Additional Data 2");
             intent.putExtra("EXTRA_DATA_3", "Additional Data 3");

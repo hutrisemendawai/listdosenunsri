@@ -1,6 +1,7 @@
 package com.example.listdosen;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -10,15 +11,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.imageview.ShapeableImageView;
 
 public class DetailsActivity extends AppCompatActivity {
-
+    private int position;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
 
 
-        int position = getIntent().getIntExtra("POSITION", -1);
+
         Intent intent = getIntent();
+        position = intent.getIntExtra("POSITION", -1);
         String description = intent.getStringExtra("DESCRIPTION");
 
 
@@ -60,6 +62,25 @@ public class DetailsActivity extends AppCompatActivity {
 
     public void onImageButtonClick(View view) {
         finish();
+    }
+
+    public void onCallClick(View view) {
+        String[] phoneNumbers = getResources().getStringArray(R.array.extra_data_6);
+        String phoneNumber = phoneNumbers[position];
+
+        Intent callIntent = new Intent(Intent.ACTION_DIAL);
+        callIntent.setData(Uri.parse("tel:" + phoneNumber));
+        startActivity(callIntent);
+    }
+
+    public void onEmailClick(View view) {
+
+        String[] emails = getResources().getStringArray(R.array.extra_data_5);
+        String email = emails[position];
+
+        Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
+        emailIntent.setData(Uri.parse("mailto:" + email));
+        startActivity(emailIntent);
     }
 }
 
